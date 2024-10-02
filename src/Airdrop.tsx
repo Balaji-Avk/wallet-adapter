@@ -20,7 +20,7 @@ function Airdrop(){
             }
         }   
     }
-    getBalance();
+    getBalance();   
     return(
         <div>
             <div>

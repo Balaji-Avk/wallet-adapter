@@ -2,7 +2,9 @@ import { ConnectionProvider, useConnection, WalletProvider } from '@solana/walle
 import { WalletDisconnectButton, WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import '@solana/wallet-adapter-react-ui/styles.css';
 import Airdrop from './Airdrop';
-import Transfer from './Transfer'
+import Transfer from './Transfer';
+import Accounts from './accounts';
+
 function App() {
     return (
         <div className='bg-biege text-slate-900 h-screen p-2 flex flex-row justify-center'>
@@ -13,6 +15,7 @@ function App() {
                         <WalletMultiButton />
                         <WalletDisconnectButton />
                         <Airdrop />
+                        <Accounts />
                         <Transfer />
                         </WalletModalProvider>
                     </WalletProvider>

@@ -1,6 +1,8 @@
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from "@solana/web3.js";
 import { useState } from "react";
+import { Buffer } from 'buffer';
+window.Buffer = Buffer;
 
 function Transfer(){
     const [toAddress,setToAddress]= useState("");
