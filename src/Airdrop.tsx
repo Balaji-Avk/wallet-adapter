@@ -22,17 +22,14 @@ function Airdrop(){
     }
     getBalance();   
     return(
-        <div>
-            <div>
-                {wallet.publicKey?.toString()}
+        <div >
+            <div className="">
+                <p>SOL Balance</p>
+                <div id="balance"></div>
             </div>
             <div>
                 <input id="publickey" type="number" placeholder="Amount" required></input>
                 <button onClick={sendToUser}>Airdrop</button>
-            </div>
-            <div>
-                <p>SOL Balance</p>
-                <div id="balance"></div>
             </div>
             
         </div>

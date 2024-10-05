@@ -17,8 +17,6 @@ function Accounts(){
             const account = await connection.getTokenAccountsByOwner(wallet.publicKey,{programId : TOKEN_PROGRAM_ID})
             const values = [...account.value]
             setAccounts(values);
-            console.log(account.value);
-        
         }
         else{
             alert("no accounts found")            
@@ -37,16 +35,21 @@ function Accounts(){
     }, [wallet.connected]);
     return(
         <div className=''>
-            {
-                accounts.map((ele)=>{
-                    return(
-                        <div>
-                            <div>public key : {ele.pubkey.toString()}</div>
-                            <div>balance : {ele.account.lamports/LAMPORTS_PER_SOL}</div>
-                        </div>
-                    )
-                })
-            }    
+            <div className="text-center">
+                Tokens
+            </div>
+            <div>
+                {
+                    accounts.map((ele)=>{
+                        return(
+                            <div className='bg-slate-300 my-2'>
+                                <div className="">public key : {ele.pubkey.toString()}</div>
+                                <div className=''>balance : {ele.account.lamports/LAMPORTS_PER_SOL}</div>
+                            </div>
+                        )
+                    })
+                }    
+            </div>
             
         </div>
     )
